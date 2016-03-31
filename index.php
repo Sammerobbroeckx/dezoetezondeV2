@@ -53,7 +53,7 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about"><p class="navbartext">About</p></a>
+                        <a class="page-scroll" href="#menu"><p class="navbartext">Menu</p></a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#services"><p class="navbartext">Services</p></a>
@@ -110,12 +110,12 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>About Section</h1>
+                    <h1 class="menu">MENU</h1>
                 </div>
             </div>
         </div>
