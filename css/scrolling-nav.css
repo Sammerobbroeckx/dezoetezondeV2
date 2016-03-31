@@ -8,6 +8,7 @@ html
 {
     width: 100%;
     height: 100%;
+	overflow: hidden;
 }
 
 @media(min-width:767px) 
@@ -24,6 +25,14 @@ html
 	{
         padding: 0;
     }
+}
+
+@media(max-width:767px) 
+{	
+    html 
+	{
+		overflow: scroll;
+	}
 }
 
 .intro-section 
