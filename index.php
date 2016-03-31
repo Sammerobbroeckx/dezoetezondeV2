@@ -56,7 +56,7 @@
 
                         
 
-                        <a class="page-scroll" href="#about"><p class="navbartext">About</p></a>
+                        <a class="page-scroll" href="#about"><p class="navbartext">ABOUT</p></a>
 
                     </li>
                     <li>
@@ -120,7 +120,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>About Section</h1>
+                    <h1 class ="titelText">About Section</h1>
                 </div>
             </div>
         </div>
@@ -131,7 +131,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Services Section</h1>
+                    <h1 class ="titelText">Services Section</h1>
                 </div>
             </div>
         </div>
