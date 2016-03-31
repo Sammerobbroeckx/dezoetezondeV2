@@ -54,18 +54,15 @@
                     </li>
                     <li>
 
-                        
-
-                        <a class="page-scroll" href="#about"><p class="navbartext">ABOUT</p></a>
+                        <a class="page-scroll" href="#menu"><p class="navbartext">Menu</p></a>
 
                     </li>
                     <li>
                         <a class="page-scroll" href="#services"><p class="navbartext">Services</p></a>
                     </li>
                     <li>
-
-						<a href="#contact" data-toggle="modal"><p class="navbartext">Contact</p></a>
-					</li>
+                        <a class="page-scroll" href="#contact"><p class="navbartext">Contact</p></a>
+                    </li>
 					<li>
 						<a href="#login" data-toggle="modal"><p class="navbartext">Login</p></a>
 					</li>
@@ -115,12 +112,14 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class ="titelText">About Section</h1>
+
+                    <h1 class="menu">MENU</h1>
+
                 </div>
             </div>
         </div>
@@ -136,29 +135,25 @@
             </div>
         </div>
     </section>
-
-    <!-- Contact Section -->
-    <div class="modal fade" id="contact" role="dialog">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h3>Contacteer de zoete zonde!</h3>
-					</div>
-					<div class="modal-body">
-						<form action="php/mail.php" method="POST">
-							<input class="form-control" type="text" name="naam" placeholder="Naam" required></input>
-							<input class="form-control" type="text" name="email" placeholder="E-mail adres" required></input>
-							<textArea class="form-control" type="text" name="message" placeholder="je bericht" required></textArea>
-					</div>
-					<div class="modal-footer">
-						<button type="submit" class="btn btn-success">Verstuur!</button>
-						<button class="btn btn-danger" data-dismiss="modal">Close</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		
+	
+	<!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Contact Section</h1>
+					
+					<form action="php/mail.php" method="POST">
+						<input class="form-control" type="text" name="naam" placeholder="Naam" required></input>
+						<input class="form-control" type="text" name="email" placeholder="E-mail adres" required></input>
+						<textArea class="form-control" type="text" name="message" placeholder="je bericht" required></textArea>
+						<button type="submit" class="btn btn-info">Verstuur!</button>
+					</form>
+                </div>
+            </div>
+        </div>
+    </section>
+	
 		<!--admin login form-->
 		<div class="modal fade" id="login" role="dialog">
 			<div class="modal-dialog">
