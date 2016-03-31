@@ -11,11 +11,13 @@
 
     <title>De Zoete Zonde</title>
 
+	<link href="css/reset.css" rel="stylesheet">
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,7 +42,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top"><p class="navText">Home</p></a>
+                <a class="navbar-brand page-scroll" href="#page-top"><p class="navbartext">Home</p></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -51,14 +53,23 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about"><p class="navText">About</p></a>
+
+                        
+
+                        <a class="page-scroll" href="#about"><p class="navbartext">About</p></a>
+
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services"><p class="navText">Services</p></a>
+                        <a class="page-scroll" href="#services"><p class="navbartext">Services</p></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact"><p class="navText">Contact</p></a>
-                    </li>
+
+						<a href="#contact" data-toggle="modal"><p class="navbartext">Contact</p></a>
+					</li>
+					<li>
+						<a href="#login" data-toggle="modal"><p class="navbartext">Login</p></a>
+					</li>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -127,15 +138,47 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Contact Section</h1>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="modal fade" id="contact" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Contacteer de zoete zonde!</h3>
+					</div>
+					<div class="modal-body">
+						<form action="php/mail.php" method="POST">
+							<input class="form-control" type="text" name="naam" placeholder="Naam" required></input>
+							<input class="form-control" type="text" name="email" placeholder="E-mail adres" required></input>
+							<textArea class="form-control" type="text" name="message" placeholder="je bericht" required></textArea>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-success">Verstuur!</button>
+						<button class="btn btn-danger" data-dismiss="modal">Close</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--admin login form-->
+		<div class="modal fade" id="login" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Admin Login</h3>
+					</div>
+					<div class="modal-body">
+						<form action="?pagina=login" method="POST">
+							<input class="form-control" type="text" name="mail" placeholder="E-mail adres" required></input>
+							<input class="form-control" type="password" name="paswoord" placeholder="je paswoord" required></input>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-success">Login!</button>
+						<button class="btn btn-danger" data-dismiss="modal">Close</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
