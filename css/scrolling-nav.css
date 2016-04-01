@@ -117,7 +117,7 @@ html
 {
 	text-align: left;
 	margin-top: 25px;
-	font-size: 13pt;
+	font-size: 14pt;
 	font-weight: bold;
 }
 
@@ -130,6 +130,13 @@ html
 .menuActive
 {
 	text-decoration: underline;
+}
+
+.gerechtRij
+{
+	text-align: center;
+	margin-top: 25px;
+	font-size: 13pt;
 }
 
 .hide
