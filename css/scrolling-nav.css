@@ -50,18 +50,10 @@ html
     
 }
 
-.services-section 
-{
-    height: 100%;
-    padding-top: 150px;
-    text-align: center;
-  
-}
-
 .menu-section 
 {
     height: 100%;
-    padding-top: 50px;
+    padding-top: 100px;
     text-align: center; 
 }
 
@@ -78,6 +70,16 @@ html
     left: 0px;
     z-index: 1; 
 	width: 100%;
+}
+
+input
+{
+	margin-top: 15px;
+}
+
+textarea
+{
+	margin-top: 15px;
 }
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img 
