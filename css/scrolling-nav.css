@@ -96,6 +96,7 @@ html
 
 .myCarousel
 {
+	padding:0px;
 	margin: 0px;
 	width: 100%;
 }
@@ -134,4 +135,14 @@ html
 .hide
 {
 	display: hidden;
+}
+
+.nav .active a
+{
+	background-color: #3D81F5 !important;	
+}
+
+#fotogallerij
+{
+	padding:0px;
 }
