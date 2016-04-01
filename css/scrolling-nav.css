@@ -2,6 +2,7 @@ body
 {
     width: 100%;
     height: 100%;
+    background-color:#D8EEFB;
  	background-image: url("../img/bg.png");
  	
 }
@@ -21,6 +22,8 @@ html
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
+        background-color: #3D81F5;
+        border: black solid 0px;
     }
 
     .top-nav-collapse 
@@ -43,6 +46,7 @@ html
 	width: 100%;
     padding-top: 0px;
     text-align: center;
+    
    
 }
 
@@ -66,8 +70,14 @@ html
 {
     height: 100%;
     padding-top: 80px;
-    text-align: center;
-  
+    text-align: center; 
+}
+
+.contact-section
+{
+	height: 100%;
+    padding-top: 100px;
+    text-align: center; 
 }
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img 
@@ -81,6 +91,7 @@ html
 {
 	margin: 0px;
 	width: 100%;
+	
 }
 
 .myCarousel
@@ -92,4 +103,35 @@ html
 .navbartext
 {
 	color: #5BC0DE;
+	font-size:18px;
+
+}
+
+.active 
+{
+	background-color: #7ED1ED;
+}
+
+.btnMenu
+{
+	text-align: left;
+	margin-top: 25px;
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+.btnMenu:hover
+{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.menuActive
+{
+	text-decoration: underline;
+}
+
+.hide
+{
+	display: hidden;
 }

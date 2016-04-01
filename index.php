@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+	include("php/linkdb.php");
+	include("php/SqlFuncties.php");
+?>
+
 <head>
 
     <meta charset="utf-8">
@@ -53,7 +58,9 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
+
                         <a class="page-scroll" href="#menu"><p class="navbartext">Menu</p></a>
+
                     </li>
                     <li>
                         <a class="page-scroll" href="#services"><p class="navbartext">Services</p></a>
@@ -114,10 +121,58 @@
     <section id="menu" class="menu-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="menu">MENU</h1>
-					
-                </div>
+				<h1 class="menu">MENU</h1>
+				
+                <div class="col-md-3">
+					<ul>
+						<li class="btnMenu menuActive" id="btnOntbijt">ontbijten</li>
+						<li class="btnMenu" id="btnBrood">broodjes en omeletten</li>
+						<li class="btnMenu" id="btnHap">de kleine hap</li>
+						<li class="btnMenu" id="btnMakelij">Belgische makelij</li>
+						<li class="btnMenu" id="btnSoep">soepen</li>
+						<li class="btnMenu" id="btnSalade">salades en pasta's</li>
+						<li class="btnMenu" id="btnDessert">desserten</li>
+					</ul>
+				</div>
+				
+				<div class="col-md-7">
+                    <div class="divMenu" id="divOntbijt">
+						<?php
+							echo maakTabel(GetOntbijt());
+						?>
+					</div>
+                    <div class="divMenu" id="divBrood">
+						<?php
+							echo maakTabel(GetBroodjes());
+						?>
+					</div>
+                    <div class="divMenu" id="divHap">
+						<?php
+							echo maakTabel(GetKleineHapjes());
+						?>
+					</div>
+                    <div class="divMenu" id="divMakelij">
+						<?php
+							echo maakTabel(GetMakelij());
+						?>
+					</div>
+                    <div class="divMenu" id="divSoep">
+						<?php
+							echo maakTabel(GetSoepen());
+						?>
+					</div>
+                    <div class="divMenu" id="divSalade">
+						<?php
+							echo maakTabel(GetSaladesEnPastas());
+						?>
+					</div>
+                    <div class="divMenu" id="divDessert">
+						<?php
+							echo maakTabel(GetDessert());
+						?>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
             </div>
         </div>
     </section>
@@ -127,7 +182,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Services Section</h1>
+                    <h1 class ="titelText">Services Section</h1>
                 </div>
             </div>
         </div>
@@ -137,7 +192,8 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+				<div class="col-lg-4"></div>
+                <div class="col-lg-4">
                     <h1>Contact Section</h1>
 					
 					<form action="php/mail.php" method="POST">
@@ -147,6 +203,7 @@
 						<button type="submit" class="btn btn-info">Verstuur!</button>
 					</form>
                 </div>
+				<div class="col-lg-4"></div>
             </div>
         </div>
     </section>
@@ -181,7 +238,8 @@
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
-
+	
+	<script src="js/menu.js"></script>
 </body>
 
 </html>
