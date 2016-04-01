@@ -90,6 +90,7 @@ html
 
 .myCarousel
 {
+	padding:0px;
 	margin: 0px;
 	width: 100%;
 }
@@ -103,9 +104,13 @@ html
 
 }
 
-.pqge-scroll{
+.nav .active a{
+	background-color: #3D81F5 !important;
+	
 	
 }
-.active {
-	background-color: #7ED1ED;
+
+#fotogallerij
+{
+	padding:0px;
 }
