@@ -23,6 +23,10 @@
     <!-- Custom CSS -->
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+	
+	<!--Leaflet-->
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -189,24 +193,26 @@
     </section>
 	
 	<!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="row">
-				<div class="col-lg-4"></div>
-                <div class="col-lg-4">
-                    <h1>Contact Section</h1>
-					
-					<form action="php/mail.php" method="POST">
-						<input class="form-control" type="text" name="naam" placeholder="Naam" required></input>
-						<input class="form-control" type="text" name="email" placeholder="E-mail adres" required></input>
-						<textArea class="form-control" type="text" name="message" placeholder="je bericht" required></textArea>
-						<button type="submit" class="btn btn-info">Verstuur!</button>
-					</form>
-                </div>
-				<div class="col-lg-4"></div>
-            </div>
-        </div>
-    </section>
+	<div id="mapid">
+		<section id="contact" class="contact-section">		
+			<div class="container">
+				<div id="aboveLeaflet" class="row">
+					<div class="col-lg-4"></div>
+					<div class="col-lg-4">
+						<h1>Contact Section</h1>
+						
+						<form action="php/mail.php" method="POST">
+							<input class="form-control" type="text" name="naam" placeholder="Naam" required></input>
+							<input class="form-control" type="text" name="email" placeholder="E-mail adres" required></input>
+							<textArea class="form-control" type="text" name="message" placeholder="je bericht" required></textArea>
+							<button type="submit" class="btn btn-info">Verstuur!</button>
+						</form>
+					</div>
+					<div class="col-lg-4"></div>
+				</div>
+			</div>
+		</section>
+	</div>
 	
 		<!--admin login form-->
 		<div class="modal fade" id="login" role="dialog">
@@ -240,6 +246,20 @@
     <script src="js/scrolling-nav.js"></script>
 	
 	<script src="js/menu.js"></script>
+	
+	<script>
+		//init leaflet
+		var mymap = L.map('mapid').setView([51.089981, 4.366033], 15);
+
+		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+			maxZoom: 18,
+			id: 'sammerobbroeckx.pih4612k',
+			accessToken: 'pk.eyJ1Ijoic2FtbWVyb2Jicm9lY2t4IiwiYSI6ImNpbWhudHg4MDAwMHF2d2x5dTYwMmprdWoifQ.8K-5_OLy7DS3kehI6SmXHw'
+		}).addTo(mymap);
+		
+		var marker = L.marker([51.086581, 4.366033]).addTo(mymap);
+	</script>
 </body>
 
 </html>
